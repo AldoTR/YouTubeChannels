@@ -9,7 +9,7 @@ st.set_page_config(page_title="YouTube channels list",
 st.image("banner.jpg")
 
 DATE_COLUMN = 'started_at'
-DATA_URL = ('YC.csv')
+name_link =codecs.open('YC.csv')
 
 st.title('Most Subscribed YouTube Channels')
 st.header('Aldo Torres Ramírez')
@@ -19,10 +19,10 @@ st.sidebar.image("Logo.jpg")
 st.sidebar.markdown("##")
 sidebar= st.sidebar
 
-@st.cache_data
+@st.cache
 def load_data(nrows):
-    f = codecs.open(DATA_URL,'r', encoding='utf-8')
-    data=pd.read_csv(f,nrows=nrows)
+    name_link = codecs.open('YC.csv',)
+    data = pd.read_csv(name_link, nrows=nrows)
     return data
 
 def filtro_canal(channel):
@@ -46,11 +46,11 @@ tituloCanal = st.sidebar.text_input('Titulo del canal:')
 botonBuscar = st.sidebar.button('Buscar canal')
 
 if (botonBuscar):
-   manga = filtro_canal(tituloCanal.upper())
-   count_row = manga.shape[0]
+   canal = filtro_canal(tituloCanal.upper())
+   count_row = canal.shape[0]
    st.header("Canales")
    st.write(f"Total de canales mostrados: {count_row}")
-   st.write(manga)
+   st.write(canal)
    
 agreeHistogram=sidebar.checkbox("Mostrar histograma")
 if agreeHistogram:
