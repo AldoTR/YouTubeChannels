@@ -91,3 +91,5 @@ if agreeScatter:
     st.header("Gráfica de Scatter")
     st.plotly_chart(fig_scatter)
     st.write("Se muestra la categoría de cada canal")
+    
+#Update
