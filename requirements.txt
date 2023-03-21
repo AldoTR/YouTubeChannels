@@ -2,4 +2,4 @@ streamlit
 pandas
 numpy
 codecs
-plotly
+plotly.express
