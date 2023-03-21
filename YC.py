@@ -92,4 +92,11 @@ if agreeScatter:
     st.plotly_chart(fig_scatter)
     st.write("Se muestra la categoría de cada canal")
     
+uploaded_file = st.file_uploader(
+    "Choose your database", accept_multiple_files=False)
+if uploaded_file is not None:
+    file_name = uploaded_file
+else:
+    file_name = "DatabaseSample.xlsx"
+    
 #Update
