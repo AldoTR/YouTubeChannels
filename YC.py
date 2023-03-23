@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import codecs as cd 
+import codecs as cd
 import plotly.express as px
 
 st.set_page_config(page_title="Canales de YouTube con más suscriptores",
@@ -9,7 +9,7 @@ st.set_page_config(page_title="Canales de YouTube con más suscriptores",
 st.image("banner.jpg")
 
 DATE_COLUMN = 'started_at'
-name_link =codecs.open('YC.csv')
+name_link =cd.open('YC.csv')
 
 st.title('Los canales de YouTube con más suscriptores')
 st.header('Autor: Aldo Torres Ramírez')
@@ -21,7 +21,7 @@ sidebar= st.sidebar
 
 @st.cache_data
 def load_data(nrows):
-    name_link = codecs.open('YC.csv',)
+    name_link = cd.open('YC.csv',)
     data = pd.read_csv(name_link, nrows=nrows)
     return data
 
