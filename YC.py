@@ -30,7 +30,7 @@ def filtro_youtuber(Youtuber):
     return canal_filt
 
 data_load_state = st.text('Cargando datos...')
-data= load_data(1000)
+data = load_data(1000)
 data_load_state.text('Datos cargados')
 
 agree=sidebar.checkbox("Mostrar todos los canales")
